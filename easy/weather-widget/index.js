@@ -7,7 +7,7 @@ let cityName = "";
 const getCityWeather = async (cityName) => {
   try {
     const response = await fetch(
-      `https://api.openweathermap.org/data/2.5/weather?q=${cityName}&appid=8bf96c46feceb22358ca30e150bc121a`
+      `https://api.openweathermap.org/data/2.5/weather?q=${cityName}&appid=${api_key}`  //add your api_key here
     );
     if (!response.ok) {
       throw new Error("City not found");
