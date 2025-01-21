@@ -1,0 +1,55 @@
+/* Basic styles for navbar */
+.navbar {
+  background-color: #333;
+  padding: 1rem;
+}
+.menu-items {
+  list-style: none;
+  display: flex;
+  gap: 1rem;
+  margin: 0;
+  padding: 0;
+}
+.nav-items {
+  color: white;
+  cursor: pointer;
+  position: relative;
+}
+
+/* Dropdown styles */
+.profile-dropdown {
+  list-style: none;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  background-color: white;
+  color: black;
+  padding: 0.5rem 1rem;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  display: none;
+}
+
+.profile-dropdown.show {
+  display: block;
+  z-index: 100;
+}
+
+/* Responsive styles for smaller screens */
+@media (max-width: 768px) {
+  .navbar {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  .menu-items {
+    flex-direction: column;
+    gap: 0.5rem;
+    width: 100%;
+  }
+  .nav-items {
+    width: 100%;
+    text-align: left;
+    padding: 0.5rem 1rem;
+    border-bottom: 1px solid white;
+  }
+}
