@@ -1,0 +1,99 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background-color: #f4f4f4;
+  transition: background-color 0.3s ease;
+}
+
+.container {
+  text-align: center;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.container.light {
+  background-color: #ffffff;
+}
+
+.container.light .heading {
+  color: #000000;
+}
+
+.container.light .color-card {
+  background-color: #000000;
+}
+
+.container.light .toggle {
+  background-color: #d1d1d1;
+}
+
+.container.light .toggle-btn {
+  background-color: #000000;
+}
+
+.container.dark {
+  background-color: #333333;
+}
+
+.container.dark .heading {
+  color: #ffffff;
+}
+
+.container.dark .color-card {
+  background-color: #ffffff;
+}
+
+.container.dark .toggle {
+  background-color: #555555;
+}
+
+.container.dark .toggle-btn {
+  background-color: #ffffff;
+}
+
+.color-card {
+  width: 100px;
+  height: 100px;
+  margin: 20px auto;
+  border-radius: 10px;
+  transition: background-color 0.3s ease;
+}
+
+.toggle {
+  width: 50px;
+  height: 25px;
+  margin: 20px auto;
+  border-radius: 25px;
+  position: relative;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  display: flex;
+  align-items: center;
+  background-color: #000000;
+}
+
+.toggle-btn {
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  position: absolute;
+  top: 2.5px;
+  left: 2.5px;
+  background-color: #fff;
+  transition: all 0.3s ease;
+}
+
+.container.dark .toggle-btn {
+  transform: translateX(25px);
+}
